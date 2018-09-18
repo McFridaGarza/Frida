@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".activities.DetailBarberActivity">
+    <!-- SCROLL GENERAL !-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp" >
+        <!-- LINEAR LAYOUT SCROLL !-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/close_detail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/ic_baseline_clear_24px"
+                android:drawableTint="@android:color/darker_gray"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F87A28"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/sample_foto" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="Jose Isikawa"
+                    android:textColor="#FFFF"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_horizontal"
+                    android:text="Miembro desde Ago 2018"
+                    android:textColor="#FFFF" />
+            </LinearLayout>
+
+       <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp">
+            <!--   LINEAR LAYOUT SCROLL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <GridView
+                        android:id="@+id/gridGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:columnWidth="100dp"
+                        android:numColumns="auto_fit"></GridView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Comentarios"
+                    android:textColor="#FFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/customer_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+          <!--   COMENTARIOS BARBEROS !-->
+
+                <TextView
+                    android:id="@+id/txtcomentario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="8dp"
+                                        android:text=" Escribe tus comentarios:"
+                    android:textColor="#FFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="20dp"
+                    android:inputType="textMultiLine"
+                    android:background="#FFFF"
+                    />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="#FFFF"
+                    android:layout_alignParentRight="true"
+
+                    android:src="@drawable/ic_baseline_send_24px"
+                    />
+
+
+            </RelativeLayout>
+            <!--  TERMINA COMENTARIOS BARBEROS !-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
